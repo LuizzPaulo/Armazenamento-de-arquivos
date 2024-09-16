@@ -6,6 +6,9 @@ $(document).ready(function(){
         $('#btnCancelar').click(function(){
             $('form').slideUp();
         })
+        $('id').click(function(){
+            alert('deu certo');
+        })
         $('#btnInserir').click(function() {
             $('form').slideDown();
         })
@@ -14,11 +17,7 @@ $(document).ready(function(){
 
             let item=$('<li style="display:none;"></li>');
 
-            $(`<img src="./imagens/arquivo.jpg"></img>`).appendTo(item);
-
-            $(`<div>
-                <a href="${$('#campoUrl').val()}"class="link-da-imagem" target="_blank" >${$('#campoUrl').val()}</a>
-            </div>`).appendTo(item);
+            $(`<a id="id">${campo}</a>`).appendTo(item);
 
             $(item).appendTo('ul');
 
