@@ -1,28 +1,20 @@
 $(document).ready(function(){
 
+    $('#btnInserir').click(function() {
+        $('form').slideDown();
+        })
+
     $('form').on('submit', function(e){
-        e.preventDefault();
 
-        $('#btnCancelar').click(function(){
-            $('form').slideUp();
-        })
-        $('id').click(function(){
-            alert('deu certo');
-        })
-        $('#btnInserir').click(function() {
-            $('form').slideDown();
-        })
-        let campo=$('#campoUrl').val();
-        if (campo!=''){
+        e.preventDefault(); 
 
-            let item=$('<li style="display:none;"></li>');
-
-            $(`<a id="id">${campo}</a>`).appendTo(item);
-
-            $(item).appendTo('ul');
-
-            $(item).fadeIn(1200);
+        if (($('#campoUrl').val())!=''){
+            $(`<li>${$('#campoUrl').val()}</li>`).appendTo('ul'); 
+            $('#campoUrl').val('');
         }
-        $('#campoUrl').val('');
     })
+    $('li').click(function () {
+        $(this).toggleClass('line-through');
+    });
 })
+

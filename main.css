@@ -18,19 +18,8 @@ button{
     padding: 8px;
     margin: 8px;
 }
-ul{
-    /*display: flex;
-    flex-wrap: wrap;*/
-}
-li{
-    position: relative;
-    max-height: 150px;
-    overflow-y: hidden;
-    margin:10px;
-}
-
-a::selection{
-    text-decoration:line-through;
+.line-through{
+    text-decoration: line-through;
 }
 .conteinerUl{
     display: block;
